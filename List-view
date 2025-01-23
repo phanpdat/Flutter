@@ -30,7 +30,24 @@ class MyApp extends StatelessWidget {
             )
           ],
         ),
+
+        //                          LISTVIEW.BUILDER
+
+        /*
+        
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(
+              names[index],
+            ),
+          ),
+        ),
+
+        */
       ),
     );
   }
 }
+
+
