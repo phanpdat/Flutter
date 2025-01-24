@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+// ignore: must_be_immutable
+class TodoPage extends StatelessWidget {
+  TodoPage({super.key});
+
+  TextEditingController mycontroller = TextEditingController();
+
+  void printtext() {
+    // ignore: avoid_print
+    print(mycontroller.text);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Center(child: Text("To do page")),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextField(
+            controller: mycontroller,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                printtext();
+              },
+              child: Text("On Tap !!!"))
+        ],
+      ),
+    );
+  }
+}
